@@ -10,6 +10,7 @@ startBtn.addEventListener("click", () => {
         const color = getRandomHexColor();
         body.style.backgroundColor = color;
     }, 1000);
+
     startBtn.disabled = true;
 
 });
