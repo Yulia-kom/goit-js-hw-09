@@ -21,7 +21,6 @@ function checkDate(dt) {
 
     const now = new Date();
     if (dt < now) {
-        //window.alert("Please choose a date in the future");
         Notiflix.Report.failure("Please choose a date in the future");
         return;
     }
@@ -59,8 +58,6 @@ startBtn.addEventListener("click", () => {
     }, 1000);
     Notiflix.Notify.success();
 });
-
-
 
 function addLeadingZero(num) {
     return String(num).padStart(2, "0");
