@@ -7,4 +7,4 @@ var t,e=arguments[3];!function(e,i){"function"==typeof t&&t.amd?t([],function(){
 },{}],"GyVV":[function(require,module,exports) {
 "use strict";var e=t(require("notiflix"));function t(e){return e&&e.__esModule?e:{default:e}}require("notiflix/dist/notiflix-3.2.2.min.css");const i=document.querySelector(".form");function o(e,t){return new Promise((i,o)=>{setTimeout(()=>{Math.random()>.3?i({position:e,delay:t}):o({position:e,delay:t})},t)})}i.addEventListener("submit",t=>{t.preventDefault();const n=new FormData(i),s=parseInt(n.get("delay")),r=parseInt(n.get("step")),u=parseInt(n.get("amount"));for(let i=0;i<u;i++)o(i,s+r*i).then(({position:t,delay:i})=>{e.default.Notify.success(`✅ Fulfilled promise ${t} in ${i}ms`,{timeout:5e3})}).catch(({position:t,delay:i})=>{e.default.Notify.failure(`❌ Rejected promise ${t} in ${i}ms`,{timeout:5e3})})});
 },{"notiflix":"hWOm","notiflix/dist/notiflix-3.2.2.min.css":"opPG"}]},{},["GyVV"], null)
-//# sourceMappingURL=/goit-js-hw-09/03-promises.13ee5d5d.js.map
+//# sourceMappingURL=/goit-js-hw-09/03-promises.d8519b0d.js.map
