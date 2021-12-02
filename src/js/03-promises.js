@@ -7,18 +7,6 @@ const form = document.querySelector(".form");
 
 
 function createPromise(position, delay) {
-  // const shouldResolve = Math.random() > 0.3;
-  // if (shouldResolve) {
-  //   return new Promise((resolve, reject) => {
-  //     console.log(' dolgo dolgo shitaesh');
-  //     resolve({position, delay});
-  //   });
-  // } else {
-  //   return new Promise((resolve, reject) => {
-  //     console.log(' dolgo dolgo shitaesh');
-  //     reject({ position, delay });
-  //   });
-  // }
 
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -35,13 +23,11 @@ function createPromise(position, delay) {
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  // debugger;
 
   const data = new FormData(form);
   const delay = parseInt(data.get("delay"));
   const step = parseInt(data.get("step"));
   const amount = parseInt(data.get("amount"));
-  // console.log(delay, step, amount);
 
   for (let i = 0; i < amount; i++) {
     createPromise(i, delay + step * i)
