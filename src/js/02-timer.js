@@ -18,6 +18,7 @@ const timerId = null;
 
 function checkDate(dt) {
     startBtn.disabled = true;
+    input.disabled = true;
 
     const now = new Date();
     if (dt < now) {
