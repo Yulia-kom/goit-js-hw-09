@@ -18,7 +18,6 @@ const timerId = null;
 
 function checkDate(dt) {
     startBtn.disabled = true;
-    input.disabled = true;
 
     const now = new Date();
     if (dt < now) {
@@ -42,6 +41,9 @@ const options = {
 flatpickr(input, options);
 
 startBtn.addEventListener("click", () => {
+    startBtn.disabled = true;
+    input.disabled = true;
+
     const timerId = setInterval(() => {
         const now = new Date().getTime();
         const t = endDate - now;
